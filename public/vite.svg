@@ -1,0 +1,16 @@
+<svg width="250" height="250" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+  <!-- White Circle Background -->
+  <circle cx="125" cy="125" r="120" fill="white" />
+
+  <!-- Enlarged Monitor Outline in Black (Centered) -->
+  <rect x="50" y="40" width="150" height="120" rx="10" ry="10" stroke="black" stroke-width="5" fill="none" />
+
+  <!-- Larger and Centered Screen Stand (Trapezium) -->
+  <polygon points="105,160 145,160 155,195 95,195" fill="black" />
+
+  <!-- Larger Code Symbol in Black (Centered inside monitor) -->
+  <text x="125" y="100" dominant-baseline="middle" text-anchor="middle"
+        font-size="50" font-family="monospace" fill="black">
+    &lt;/&gt;
+  </text>
+</svg>
