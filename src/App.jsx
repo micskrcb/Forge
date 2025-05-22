@@ -21,7 +21,7 @@ function App() {
 
   return (<div>
     {(submitted == 3) && (
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg space-y-8 h-screen">
+      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg space-y-8 h-auto relative top-5">
 
       {/* Header */}
       <header className="text-center mb-8">
