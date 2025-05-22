@@ -21,45 +21,49 @@ function App() {
 
   return (<div>
     {(submitted == 3) && (
-      <div className="max-w-4xl mx-auto p-4 bg-white shadow-lg rounded-lg space-y-6 h-screen">
-      <header className="text-center">
-        <h1 className="text-4xl font-bold">Your Portfolio</h1>
+      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg space-y-8 h-screen">
+
+      {/* Header */}
+      <header className="text-center mb-8">
+        <h1 className="text-4xl font-bold text-blue-600">Your Portfolio</h1>
         <p className="text-xl text-gray-600 mt-2">Personal Information & Resume</p>
       </header>
-
+    
+      {/* Personal Information Section */}
       <section>
-        <h2 className="text-2xl font-semibold">Personal Information</h2>
-        <div className="space-y-2 mt-2">
+        <h2 className="text-3xl font-semibold text-gray-800">Personal Information</h2>
+        <div className="space-y-3 mt-4 text-gray-700">
           <p><strong>Name:</strong> {FN} {LN}</p>
           <p><strong>Email:</strong> {EM}</p>
           <p><strong>Date of Birth:</strong> {DOB}</p>
         </div>
       </section>
-
+    
+      {/* Education Section */}
       <section>
-        <h2 className="text-2xl font-semibold">Education</h2>
-        <div className="space-y-2 mt-2">
+        <h2 className="text-3xl font-semibold text-gray-800">Education</h2>
+        <div className="space-y-4 mt-4 text-gray-700">
           {/* Institution 1 */}
           {(I1 || g1 || d1) && (
-            <div className="space-y-1">
+            <div className="space-y-2">
               {I1 && <p><strong>Institution 1:</strong> {I1}</p>}
               {g1 && <p><strong>Grade:</strong> {g1}</p>}
               {d1 && <p><strong>Duration:</strong> {d1}</p>}
             </div>
           )}
-
+    
           {/* Institution 2 */}
           {(I2 || g2 || d2) && (
-            <div className="space-y-1">
+            <div className="space-y-2">
               {I2 && <p><strong>Institution 2:</strong> {I2}</p>}
               {g2 && <p><strong>Grade:</strong> {g2}</p>}
               {d2 && <p><strong>Duration:</strong> {d2}</p>}
             </div>
           )}
-
+    
           {/* Institution 3 */}
           {(I3 || g3 || d3) && (
-            <div className="space-y-1">
+            <div className="space-y-2">
               {I3 && <p><strong>Institution 3:</strong> {I3}</p>}
               {g3 && <p><strong>Grade:</strong> {g3}</p>}
               {d3 && <p><strong>Duration:</strong> {d3}</p>}
@@ -67,6 +71,13 @@ function App() {
           )}
         </div>
       </section>
+    
+      {/* Biodata Section */}
+      <section className="mt-8 bg-gray-100 p-6 rounded-lg">
+        <h2 className="text-2xl font-semibold text-gray-800">Biodata</h2>
+        <p className="mt-2 text-gray-700">{data}</p>
+      </section>
+    
     </div>
     )}
 
