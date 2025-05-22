@@ -270,7 +270,7 @@ export function Func() {
               <>
                 <img class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 h-60 block mx-auto mb-10 object-cover object-center rounded"
                   alt="step1"
-                  src="src/assets/images/jukan-tateisi-bJhT_8nbUA0-unsplash.jpg" />
+                  src="https://images.unsplash.com/photo-1502101872923-d48509bff386?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RhcnR8ZW58MHx8MHx8fDA%3D" />
                 <h1 class="text-xl font-medium title-font mb-4 text-white">Fill Your Details</h1>
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
                   Step 1: Start by entering your name, title, location, and a short bio for your Forgefolio.
