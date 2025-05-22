@@ -21,7 +21,7 @@ function App() {
 
   return (<div>
     {(submitted == 3) && (
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg space-y-8 h-auto relative top-5">
+      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg space-y-8 h-auto relative top-5 bottom-10 w-full sm:w-1/2">
 
       {/* Header */}
       <header className="text-center mb-8">
@@ -83,8 +83,8 @@ function App() {
 
 {(submitted != 3) &&(
     
-    <div className="min-h-screen bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% flex flex-col items-center justify-center p-4">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-1/2 text-center">
+    <div className="min-h-screen bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% flex flex-col items-center justify-center p-4 w-full ">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full text-center sm:w-1/2">
       { (submitted ==1) && (<div>
         <h1 className="text-3xl font-bold text-blue-600 mb-4">Pls fill your details</h1>
         <p className="text-gray-700 text-lg">Tell us something about yourself</p>
