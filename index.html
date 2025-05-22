@@ -8,9 +8,8 @@
   </head>
   <body class="">
     
-    
-    <header class="text-gray-700 sticky top-0 z-50 bg-gray-100 shadow-md">
-      <div class="container mx-auto flex flex-wrap items-center justify-between py-4 px-6">
+    <header class="text-gray-700 sticky top-0 z-50 bg-gray-300 shadow-md sm:h-20 w-full max-w-full overflow-x-hidden">
+      <div class="container mx-auto flex flex-wrap items-center justify-between py-4 px-6 max-w-screen-lg">
         <a class="flex items-center text-gray-900 font-bold text-xl" href="#">
           <svg width="80" height="60" viewBox="0 50 200 100" xmlns="http://www.w3.org/2000/svg">
             <rect x="40" y="40" width="120" height="90" rx="8" ry="8" stroke="#000" stroke-width="4" fill="none" />
@@ -19,22 +18,27 @@
               &lt;/&gt;
             </text>
           </svg>
-          <span class="ml-3">FORGE-FOLIO</span>
+          <span class="ml-3 text-lg">FORGE-FOLIO</span>
         </a>
-        <nav class="flex flex-wrap items-center gap-x-6 text-sm font-medium">
+        <!-- Navbar for desktop and mobile -->
+        <nav class="flex flex-wrap items-center gap-x-6 text-sm font-medium space-x-4 sm:space-x-6">
           <a href="index.html" class="hover:text-gray-900">Home</a>
           <a href="#" class="hover:text-gray-900">Projects</a>
           <a href="#" class="hover:text-gray-900">About</a>
           <a href="#" class="hover:text-gray-900">Contact</a>
         </nav>
+        
       </div>
     </header>
     
-    <div class="bg-white shadow-inner border-t border-gray-200 text-gray-700 text-center text-sm py-2">
+    <div class="bg-grey-100 shadow-inner border-t border-gray-200 text-gray-700 text-center text-sm py-2 in-fixed bottom-0 w-full">
       Craft your story. Build your brand.
     </div>
+
+    <div id="root2" class="sticky sm:top-20 z-1 w-full flex-shrink size-fit bp-5 bg-gray-900 overflow-auto"></div>
     
-    <div id="root" class="bg-gradient-to-t from-sky-500 to-indigo-500 h-full min-h-screen w-full"></div>
+    <div id="root" class="bg-gradient-to-t from-sky-500 to-indigo-500 sm:h-auto sm:min-h-screen w-full relative z-5 sm:top-0 "></div>
+    
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

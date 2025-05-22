@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './index.css';
 
-function App() {
+export default function App() {
   const [data, setData] = useState('');
   const [FN, setFN] = useState('');
   const [LN, setLN] = useState('');
@@ -205,4 +205,120 @@ function App() {
 }
 
 
-export default App;
+
+
+export function Func() {
+  const [submitted, setSubmitted] = useState(1);
+
+  return (
+    <div className="App">
+      <section class="text-gray-400 bg-gray-900 body-font h-screen">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap flex-col">
+          <div class="flex mx-auto flex-wrap mb-20">
+            {/* Step Buttons */}
+            {[1, 2, 3, 4].map((step) => {
+              const isActive = submitted === step;
+              const titles = ['Fill Details', 'Build Resume', 'Add Projects', 'Publish'];
+              const icons = [
+                // User Icon
+                <svg key="1" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                     class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                  <circle cx="12" cy="7" r="4" />
+                  <path d="M5.5 20a7.5 7.5 0 0113 0" />
+                </svg>,
+                // Document Icon
+                <svg key="2" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                     class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                  <path d="M8 4h10l2 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2z" />
+                  <line x1="9" y1="9" x2="15" y2="9" />
+                  <line x1="9" y1="13" x2="15" y2="13" />
+                </svg>,
+                // Folder Icon
+                <svg key="3" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                     class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                  <path d="M3 7a2 2 0 012-2h5l2 2h7a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                </svg>,
+                // Share Icon
+                <svg key="4" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                     class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+                  <path d="M4 12v7a2 2 0 002 2h12a2 2 0 002-2v-7" />
+                  <polyline points="16 6 12 2 8 6" />
+                  <line x1="12" y1="2" x2="12" y2="15" />
+                </svg>
+              ];
+
+              return (
+                <a
+                  key={step}
+                  onClick={() => setSubmitted(step)}
+                  class={`sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none tracking-wider rounded-t ${
+                    isActive
+                      ? 'bg-gray-800 border-green-500 text-white'
+                      : 'border-gray-800 hover:text-white'
+                  }`}
+                >
+                  {icons[step - 1]}
+                  STEP {step}
+                </a>
+              );
+            })}
+          </div>
+
+          <div class="flex flex-col text-center w-full text-white">
+            {/* Step 1 */}
+            {submitted === 1 && (
+              <>
+                <img class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 h-60 block mx-auto mb-10 object-cover object-center rounded"
+                  alt="step1"
+                  src="src/assets/images/jukan-tateisi-bJhT_8nbUA0-unsplash.jpg" />
+                <h1 class="text-xl font-medium title-font mb-4 text-white">Fill Your Details</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                  Step 1: Start by entering your name, title, location, and a short bio for your Forgefolio.
+                </p>
+              </>
+            )}
+
+            {/* Step 2 */}
+            {submitted === 2 && (
+              <>
+                <img class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 h-60 block mx-auto mb-10 object-cover object-center rounded"
+                  alt="step2"
+                  src="https://images.unsplash.com/photo-1508317469940-e3de49ba902e?w=500&auto=format&fit=crop&q=60" />
+                <h1 class="text-xl font-medium title-font mb-4 text-white">Build Your Resume</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                  Step 2: Upload your existing resume or use our builder to generate one with your skills and tools.
+                </p>
+              </>
+            )}
+
+            {/* Step 3 */}
+            {submitted === 3 && (
+              <>
+                <img class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 h-60 block mx-auto mb-10 object-cover object-center rounded"
+                  alt="step3"
+                  src="https://plus.unsplash.com/premium_vector-1723195566168-90a5eb41121b?w=500&auto=format&fit=crop&q=60" />
+                <h1 class="text-xl font-medium title-font mb-4 text-white">Add Projects</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                  Step 3: Showcase your work — include descriptions, tech stacks, and visuals of your best projects.
+                </p>
+              </>
+            )}
+
+            {/* Step 4 */}
+            {submitted === 4 && (
+              <>
+                <img class="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 h-60 block mx-auto mb-10 object-cover object-center rounded"
+                  alt="step4"
+                  src="https://images.unsplash.com/photo-1633613286991-611fe299c4be?w=500&auto=format&fit=crop&q=60" />
+                <h1 class="text-xl font-medium title-font mb-4 text-white">Review & Publish</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                  Step 4: Preview your Forgefolio and publish it to make it live. Share with recruiters or peers!
+                </p>
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
